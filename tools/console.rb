@@ -12,5 +12,14 @@ c2 = Customer.new("Grace", "Guzzardo")
 c3 = Customer.new("Kara", "Dodson")
 c4 = Customer.new("Minaal", "Khan")
 
+r1 = Restaurant.new("Pizza chef")
+r2 = Restaurant.new("Cacarinos")
+r3 = Restaurant.new("Nanas")
+
+review1 = Review.new(c1, r1, 9)
+review2 = Review.new(c2, r1, 8)
+review3 = Review.new(c1, r3, 7)
+
+
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
