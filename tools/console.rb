@@ -6,6 +6,10 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-
+alex = Customer.new("alex","lix")
+chipolte = Restaurant.new("Chipolte")
+mcd = Restaurant.new("Mcdonalds")
+review1 = Review.new(alex,chipolte,10)
+review2 = Review.new(alex,mcd,5)
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
