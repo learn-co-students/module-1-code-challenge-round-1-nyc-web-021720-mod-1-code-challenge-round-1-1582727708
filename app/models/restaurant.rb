@@ -11,7 +11,6 @@ class Restaurant
     end 
   end 
 
-
   def customers
     reviews.map do |each_review|
       each_review.customer 
