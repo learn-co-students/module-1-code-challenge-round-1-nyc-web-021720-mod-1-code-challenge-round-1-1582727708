@@ -20,17 +20,7 @@ class Customer
     "#{given_name} #{family_name}"
   end
 
-  def given_name
-    @given_name
-  end 
-
-  def family_name
-    @family_name
-  end 
-
-  def full_name
-    "#{@given_name} #{@family_name}"
-  end 
+  
 
 
 end
