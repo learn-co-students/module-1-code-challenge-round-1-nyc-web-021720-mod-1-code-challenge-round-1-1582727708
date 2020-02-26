@@ -12,11 +12,11 @@ restaurant1 = Restaurant.new("Polo")
 restaurant2 = Restaurant.new("Maison Premiere")
 restaurant3 = Restaurant.new("Rachel's")
 
-review1 = Review.new(customer1, restaurant1)
-review2 = Review.new(customer2, restaurant1)
-review3 = Review.new(customer2, restaurant2)
-review4 = Review.new(customer3, restaurant3)
-review5 = Review.new(customer4, restaurant3)
+review1 = Review.new(customer1, restaurant1, 7)
+review2 = Review.new(customer2, restaurant1, 6)
+review3 = Review.new(customer2, restaurant2, 5)
+review4 = Review.new(customer3, restaurant3, 8)
+review5 = Review.new(customer3, restaurant3, 3)
 
 
 binding.pry
