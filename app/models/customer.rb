@@ -36,8 +36,8 @@ class Customer
   end
 
   def self.find_by_name(name)
-    Customer.all.find do |customer_obj|
-      customer_obj.full_name == name
+    Review.all.find do |review_obj|
+      review_obj.customer.full_name == name
     end
   end
 

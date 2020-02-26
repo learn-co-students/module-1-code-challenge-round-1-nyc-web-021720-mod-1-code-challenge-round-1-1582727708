@@ -1,12 +1,13 @@
 class Restaurant
   attr_reader :name
-
+  @@all = []
   def initialize(name)
     @name = name
+    Restaurant.all << self
   end
 
-  def name
-    @name
+  def self.all
+    @@all
   end
 
   def reviews
@@ -20,8 +21,6 @@ class Restaurant
       review_obj.customer
     end.uniq
   end
-
-  
 
 
 end
