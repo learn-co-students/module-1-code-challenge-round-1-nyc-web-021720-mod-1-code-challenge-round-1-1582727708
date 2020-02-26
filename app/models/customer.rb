@@ -35,7 +35,17 @@ class Customer
     Review.new(self, restaurant, rating)
   end
 
+  def num_reviews
+    Review.all.count
+  end
 
+  def self.find_by_name(name)
+    #name is full name
+    #return first customer whos full name matches
+    Customer.all.find do |c_name|
+      c_name == name
+    end
+  end
 
 end
  
