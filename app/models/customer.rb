@@ -1,12 +1,42 @@
 class Customer
   attr_accessor :given_name, :family_name
-
+  @@all = []
+  
   def initialize(given_name, family_name)
     @given_name = given_name
     @family_name  = family_name
+    @@all << self
   end
 
   def full_name
     "#{given_name} #{family_name}"
+  end
+
+  def reviews
+    Review.all.select {|review| review.customer == self}
+  end
+
+  def restaurants
+    self.reviews.map {|review| review.restaurant}
+  end
+
+  def add_review(restaurant, rating)
+    Review.new(self, restaurant, rating)
+  end
+
+  def num_reviews
+    self.reviews.length
+  end
+
+  def self.find_by_name(full_name)
+    Customer.all.find {|customer| "#{customer.given_name} #{customer.family_name}" == full_name}.given_name
+  end
+
+  def self.find_all_by_given_name(name)
+    Customer.all.select {|customer| customer.given_name == name}
+  end
+
+  def self.all
+    @@all
   end
 end
