@@ -33,4 +33,18 @@ class Customer
   def add_review(restaurant, rating)
     Review.new(self, restaurant, rating)
   end
+
+  def num_reviews
+    self.reviews.length
+  end
+
+  def self.find_by_name(name)
+    Review.all.find do |review|
+      review.customer.full_name == name
+    end
+  end
+
+  # def self.find_all_by_given_name(name)
+
+  # end
 end
