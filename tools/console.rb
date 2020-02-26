@@ -24,12 +24,12 @@ rest3 = Restaurant.new("Doughboys")
 rest4 = Restaurant.new("Hill & Bay")
 
 # customer / restaurant / rating
-review1 = Review.new(cust1, rest1, 97)
-review2 = Review.new(cust2, rest2, 90)
-review3 = Review.new(cust3, rest1, 92)
-review4 = Review.new(cust4, rest3, 85)
-review5 = Review.new(cust4, rest4, 56)
-review6 = Review.new(cust1, rest1, 94)
+review1 = Review.new(cust1, rest1, 5)
+review2 = Review.new(cust2, rest2, 4)
+review3 = Review.new(cust3, rest1, 3)
+review4 = Review.new(cust4, rest3, 5)
+review5 = Review.new(cust4, rest4, 3)
+review6 = Review.new(cust1, rest1, 3)
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
