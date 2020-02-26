@@ -15,6 +15,12 @@ class Customer
     @@all
   end
 
+  def restaurants
+    Review.all.select do |review|
+      review.customer == self
+    end
+  end
+
   def add_review(restaurant, rating)
     Review.new(self, restaurant, rating)
   end
@@ -24,9 +30,5 @@ end
 # Returns a unique array of all restaurants a 
 # customer has reviewed
 
-# Customer#add_review(restaurant, rating)
-# given a restaurant object and a star rating 
-# (as an integer), creates a new review and 
-# associates it with that customer and restaurant.
 
 

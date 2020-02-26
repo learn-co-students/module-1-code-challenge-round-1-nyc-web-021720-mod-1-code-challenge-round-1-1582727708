@@ -15,9 +15,10 @@ end
 
 # Review#customer
 # returns the customer object for that review
-# Once a review is created, s
-# hould not be able to change the customer
+# Once a review is created, 
+# should not be able to change the customer
 
 # Review#restaurant
 # returns the restaurant object for that given review
-# Once a review is created, should not be able to change the restaurant
+# Once a review is created, should 
+# not be able to change the restaurant
