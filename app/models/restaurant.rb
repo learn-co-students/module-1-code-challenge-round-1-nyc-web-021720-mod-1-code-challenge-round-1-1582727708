@@ -21,5 +21,8 @@ class Restaurant
     end.uniq
   end
 
+  def average_star_rating
+    
+  end
 end
  

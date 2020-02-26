@@ -39,11 +39,11 @@ class Customer
     Review.all.count
   end
 
-  def self.find_by_name(name)
+  def self.find_all_by_name(name)
     #name is full name
-    #return first customer whos full name matches
-    Customer.all.find do |c_name|
-      c_name == name
+    #return array of customer whos full name matches
+    Customer.all.select do |c_name|
+      c_name.full_name == name
     end
   end
 

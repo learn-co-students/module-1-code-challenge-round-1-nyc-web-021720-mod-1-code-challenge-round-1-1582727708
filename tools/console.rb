@@ -10,11 +10,13 @@ end
 
 
 bob = Customer.new("Bob", "Sherwin") #first_name, last_name
+steve = Customer.new("Steve", "last_name")
+
 r1 = Restaurant.new("resturnat") #Restaurant_name
 #review1 = Review.new(bob, r1, 3)  #customer, Restaurant, rating(int)
 
 review1 = bob.add_review(r1, 3)
-
+review2 = steve.add_review(r1, 2)
 
 
 
