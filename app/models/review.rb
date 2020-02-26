@@ -13,10 +13,6 @@ class Review
         @@all
     end
 
-    def customer 
-    
-    end
-
 end
 
 # `Review#customer`
