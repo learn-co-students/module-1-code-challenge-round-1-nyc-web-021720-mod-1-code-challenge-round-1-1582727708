@@ -8,6 +8,22 @@ class Restaurant
   def name
     @name
   end
+
+  def reviews
+    Review.all.select do |review_obj|
+      review_obj.restaurant == self 
+    end
+  end
+
+  def customers
+    self.reviews.select do |review_obj|
+      review_obj.customer
+    end.uniq
+  end
+
+  
+
+
 end
 
 

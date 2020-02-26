@@ -14,23 +14,40 @@ class Customer
   def self.all
     @@all
   end 
-  # def given_name
-  #   @given_name
-  # end
+  
+  def restaurants
+    Review.all.select do |review_obj|
+      review_obj.restaurant == self
+    end
+  end
+
+  def add_review(restuarant,rating)
+    Review.new(self,restuarant,rating)
+  end
+
+  def review 
+    Review.all.select do |review_obj|
+      review_obj.customer == self 
+    end
+  end 
+  
+  def num_reviews
+    self.review.count
+  end
+
+  def self.find_by_name(name)
+    Customer.all.find do |customer_obj|
+      customer_obj.full_name == name
+    end
+  end
+
+  def self.find_all_by_given_name(name)
+    Review.all.select do |review_obj|
+      review_obj.customer.given_name == name 
+    end
+  end
+
+  # - `Customer.find_by_name(name)`
+  # - given a string of a **full name**, returns the **first customer** whose full name matches
 
 end
-
-
-
-
-
-
-
-# - `Customer#given_name`
-#   - returns the customer's given name
-#   - should be able to change after the customer is created
-# - `Customer#family_name`
-#   - returns the customer's family name
-#   - should be able to change after the customer is created
-# - `Customer#full_name`
-#   - returns the full name of the customer, with the given name and the family name concatenated, Western style.
