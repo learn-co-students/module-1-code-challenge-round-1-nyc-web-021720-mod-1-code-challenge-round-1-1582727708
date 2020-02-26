@@ -39,4 +39,5 @@ class Customer
   def self.find_all_by_given_name(name)
     Customer.all.select{|customer| customer.given_name == name}
   end 
+  
 end
