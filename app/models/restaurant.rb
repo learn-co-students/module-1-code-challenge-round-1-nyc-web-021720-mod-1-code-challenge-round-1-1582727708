@@ -31,7 +31,7 @@ class Restaurant
     reviews.map do |review|
       total += review.rating
     end
-    total / reviews.size
+    total / reviewsx.size
 
   #we want reviews to be an array of the ratings for a resturant
   #   reviews = Review.all.map do |review_num|
