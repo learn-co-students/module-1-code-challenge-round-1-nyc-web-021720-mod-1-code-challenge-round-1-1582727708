@@ -11,6 +11,7 @@ c1 = Customer.new("Joseph", "Guzzardo")
 c2 = Customer.new("Grace", "Guzzardo")
 c3 = Customer.new("Kara", "Dodson")
 c4 = Customer.new("Minaal", "Khan")
+c5 = Customer.new("Joseph", "Macchio")
 
 r1 = Restaurant.new("Pizza chef")
 r2 = Restaurant.new("Cacarinos")
@@ -23,6 +24,7 @@ review4 = Review.new(c4, r3, 2)
 review5 = Review.new(c4, r3, 4)
 
 c4.add_review(r2, 1)
+c5.add_review(r1, 4)
 
 
 binding.pry

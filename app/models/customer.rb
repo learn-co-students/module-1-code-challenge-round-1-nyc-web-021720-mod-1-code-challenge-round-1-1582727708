@@ -44,7 +44,9 @@ class Customer
     end
   end
 
-  # def self.find_all_by_given_name(name)
-
-  # end
+  def self.find_all_by_given_name(name)
+    Review.all.select do |review|
+      review.customer.given_name == name
+    end
+  end
 end
