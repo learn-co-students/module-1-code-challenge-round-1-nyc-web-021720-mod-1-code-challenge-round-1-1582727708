@@ -29,6 +29,22 @@ class Customer
     Review.new(self, restaurant, rating)
   end
 
+  def num_reviews
+    reviews.count
+  end 
+
+  def self.find_by_name(full_name_param)
+    all.find do |customer|
+      customer.full_name == full_name_param
+    end
+  end
+
+  def self.find_all_by_given_name(given_name_param)
+    all.select do |customer|
+      customer.given_name == given_name_param
+    end
+  end
+
   def self.all
     @@all
   end
