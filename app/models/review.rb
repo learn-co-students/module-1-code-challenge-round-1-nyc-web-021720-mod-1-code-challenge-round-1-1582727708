@@ -1,6 +1,8 @@
 class Review
 
-    attr_reader :customer, :restaurant, :rating
+    attr_reader :customer, :restaurant
+    #spec doesn't indicate that this can't be changed
+    attr_accessor :rating 
 
     @@all = []
 

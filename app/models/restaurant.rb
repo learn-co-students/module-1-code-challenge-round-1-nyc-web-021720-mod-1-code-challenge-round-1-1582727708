@@ -8,13 +8,13 @@ class Restaurant
   def reviews
     Review.all.select do |review|
       review.restaurant == self
-    end.uniq
+    end
   end
 
   def customers
     reviews.map do |review|
       review.customer
-    end
+    end.uniq
   end
 
   def average_star_rating
