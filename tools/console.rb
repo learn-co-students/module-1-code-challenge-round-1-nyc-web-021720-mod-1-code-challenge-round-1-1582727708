@@ -9,3 +9,23 @@ end
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
+
+
+
+custo1 = Customer.new("ronaldo", "christiano")
+custo2 = Customer.new("yahya","gok")
+custo3 = Customer.new("maria", "gonzo")
+
+
+restau1 = Restaurant.new("italio")
+restau2 = Restaurant.new("frencco")
+restau3 = Restaurant.new("turkish")
+restau4 = Restaurant.new("pisto")
+
+review1 = Review.new(custo1,restau3,4)
+review1 = Review.new(custo2,restau4,5)
+review1 = Review.new(cust3,restau3,3)
+
+
+binding.pry 
+
