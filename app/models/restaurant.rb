@@ -10,7 +10,14 @@ class Restaurant
   end
 
   def customers
-    reviews.all.map {|review| review.customer}
-  end.uniq
+    reviews.map do|review| 
+      review.customer
+    end.uniq
+  end
+
+  def average_star_rating
+      ratings = self.reviews.map {|reviews| reviews.rating}
+      ratings.reduce[:+] / ratings.length
+  end
 end
 

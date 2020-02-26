@@ -21,10 +21,24 @@ class Customer
   end
 
   def restaurants
-    reviews.map {|review| review.restaurant}
-  end.uniq
+    reviews.map do |review| 
+      review.restaurant
+    end.uniq
+  end
 
   def add_review(restaurant, rating)
     Review.new(self, restaurant, rating)
+  end
+
+  def num_review
+    reviews.length
+  end
+
+  def self.find_by_name(full_name)
+    Customer.all.select {|name| name.full_name == full_name}
+  end
+
+  def self.find_by_given_name(given_name)
+    Customer.all.map {|customer| customer.given_name == given_name}
   end
 end

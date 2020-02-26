@@ -13,16 +13,18 @@ class Review
     def self.all
         @@all
     end
-
-    def ratings
-        Review.all.select {|review| review.rating == self}
+    def review
+        Review.all.select {|review_object| review_object == self}
     end
-  
     def customer
-        ratings.select {|rating| rating.customer}
+        review.map do |review_object| 
+            review_object.customer
+        end
     end
 
     def restaurant
-        ratings.select {|rating| rating.restaurant}
+        review.map do |review_object| 
+            review_object.restaurant
+        end
     end
 end
