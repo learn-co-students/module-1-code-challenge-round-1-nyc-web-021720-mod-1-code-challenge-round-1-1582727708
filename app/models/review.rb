@@ -1,3 +1,28 @@
 class Review
+    attr_accessor :rating
+    attr_reader :customer, :restaurant
+
+    @@all = []
+    def initialize(customer, restaurant, rating)
+        @customer = customer
+        @restaurant = restaurant
+        @rating = rating
+        Review.all << self
+    end
+
+    def self.all
+        @@all
+    end
+
+    def ratings
+        Review.all.select {|review| review.rating == self}
+    end
   
+    def customer
+        ratings.select {|rating| rating.customer}
+    end
+
+    def restaurant
+        ratings.select {|rating| rating.restaurant}
+    end
 end
