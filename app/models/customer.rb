@@ -29,7 +29,7 @@ class Customer
   end
 
   def self.find_by_name(full_name)
-    Customer.all.find {|customer| "#{customer.given_name} #{customer.family_name}" == full_name}.given_name
+    Customer.all.find {|customer| "#{customer.given_name} #{customer.family_name}" == full_name}
   end
 
   def self.find_all_by_given_name(name)

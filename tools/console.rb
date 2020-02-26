@@ -9,7 +9,7 @@ end
 brian = Customer.new("Brian", "Desplantes")
 kevin = Customer.new("Kevin", "Desplantes")
 jacky = Customer.new("Jacky", "Chan")
-
+brian2 = Customer.new("Brian", "Walter")
 
 rest1 = Restaurant.new("Applebees")
 rest2 = Restaurant.new("Cheesecake Factory")
@@ -20,7 +20,7 @@ rev2 = brian.add_review(rest2, 10)
 rev3 = brian.add_review(rest3, 10)
 rev4 = kevin.add_review(rest2, 7)
 rev5 = kevin.add_review(rest3, 3)
-rev6 = jacky.add_review(rest1, 6)
+rev6 = jacky.add_review(rest1, 10)
 rev7 = jacky.add_review(rest2, 8)
 rev8 = jacky.add_review(rest3, 2)
 rev9 = kevin.add_review(rest2, 10)
