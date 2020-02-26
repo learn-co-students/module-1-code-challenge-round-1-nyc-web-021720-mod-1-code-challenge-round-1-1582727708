@@ -39,6 +39,13 @@ class Customer
     Review.all.count
   end
 
+  def self.find_by_name(name)
+    Customer.all.find do |c_name|
+      c_name.full_name == name
+    end
+  end
+
+
   def self.find_all_by_name(name)
     #name is full name
     #return array of customer whos full name matches
