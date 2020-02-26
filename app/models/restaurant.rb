@@ -17,4 +17,10 @@ class Restaurant
     end
   end
 
+  def average_star_rating
+    reviews.reduce(0) do |sum, review|
+      sum += review.rating
+    end.to_f / reviews.count
+  end
+
 end
