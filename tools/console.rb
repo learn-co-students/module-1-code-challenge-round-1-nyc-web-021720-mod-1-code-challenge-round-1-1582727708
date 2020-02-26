@@ -19,6 +19,8 @@ r3 = Restaurant.new("Nanas")
 review1 = Review.new(c1, r1, 9)
 review2 = Review.new(c2, r1, 8)
 review3 = Review.new(c1, r3, 7)
+review4 = Review.new(c4, r3, 2)
+review5 = Review.new(c4, r3, 4)
 
 
 binding.pry
