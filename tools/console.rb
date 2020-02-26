@@ -9,3 +9,17 @@ end
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
+
+
+# This works when typed directly into terminal, but 
+# from here 'me' is returning 'nil' - not sure why 
+me = Customer.new("Mike", "Quigley")
+
+
+# not going to finish 
+# Need to set up class assocciations 
+
+# Review is the Link Class
+# - belongs to Customer & Restaurant 
+
+# Customer & Restaurant have many reviews 
