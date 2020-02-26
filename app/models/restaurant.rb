@@ -6,8 +6,9 @@ class Restaurant
   end
    
   def reviews
-    Review.all.select{|review| review.restaurant = self }
+    Review.all.select{|review| review.restaurant == self }
   end
+  
   def customers
     self.reviews.map{|review| review.customer}.uniq
   end 

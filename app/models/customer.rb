@@ -17,7 +17,7 @@ class Customer
    
   #helper method 
   def find_reviews 
-    Review.all.select{|review| review.customer = self}
+    Review.all.select{|review| review.customer == self}
   end 
   
   def restaurants

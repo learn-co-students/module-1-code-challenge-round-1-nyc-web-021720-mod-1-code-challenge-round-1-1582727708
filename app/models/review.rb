@@ -6,7 +6,7 @@ class Review
         @customer = customer
         @restaurant = restaurant
         @rating = rating 
-        @@all << self
+        Review.all << self
     end
     def self.all
         @@all
