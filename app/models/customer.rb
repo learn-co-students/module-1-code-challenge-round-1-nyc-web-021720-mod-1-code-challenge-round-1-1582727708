@@ -29,5 +29,8 @@ class Customer
     end.uniq
   end
 
-  
+  #given a restaurant object and a star rating (as an integer), creates a new review and associates it with that customer and restaurant.
+  def add_review(restaurant, rating)
+    Review.new(self, restaurant, rating)
+  end
 end

@@ -22,6 +22,8 @@ review3 = Review.new(c1, r3, 7)
 review4 = Review.new(c4, r3, 2)
 review5 = Review.new(c4, r3, 4)
 
+c4.add_review(r2, 1)
+
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
