@@ -18,17 +18,33 @@ class Customer
   def restaurants
     Review.all.select do |review|
       review.customer == self
-    end
+    end.uniq
   end
 
   def add_review(restaurant, rating)
     Review.new(self, restaurant, rating)
   end
+
+  def self.find_by_name(full_name)
+    self.all.find {|customer| customer.full_name == full_name}
+  end
+
+  def self.find_all_by_given_name
+    self.all.select {|customer| customer.given_name == given_name}
+  end
+
+  def num_reviews
+    Review.all.select do |review|
+      review.customer == self
+    end.length
+  end
+
 end
 
-# Customer#restaurants
-# Returns a unique array of all restaurants a 
-# customer has reviewed
+# Customer#num_reviews
+# Returns the total number of reviews that 
+# a customer has authored
+
 
 
 
