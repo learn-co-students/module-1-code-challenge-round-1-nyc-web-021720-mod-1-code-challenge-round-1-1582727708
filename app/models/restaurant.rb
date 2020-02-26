@@ -28,4 +28,18 @@ class Restaurant
     end.uniq
   end 
 
+
+
+  def average_star_rating
+    rating_sum = 0
+    rating_index = 1
+    reviews.each_with_index do |value, index|
+      # binding.pry
+      rating_sum += value.rating
+      rating_index += 1
+    end 
+    # binding.pry
+    rating_average = rating_sum / rating_index
+  end 
+
 end

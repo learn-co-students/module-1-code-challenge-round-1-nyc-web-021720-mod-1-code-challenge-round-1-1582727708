@@ -30,6 +30,9 @@ review3 = Review.new(cust3, rest1, 3)
 review4 = Review.new(cust4, rest3, 5)
 review5 = Review.new(cust4, rest4, 3)
 review6 = Review.new(cust1, rest1, 3)
+review7 = Review.new(cust1, rest1, 3)
+review8 = Review.new(cust1, rest1, 2)
+review8 = Review.new(cust1, rest1, 1)
 
 binding.pry
 0 #leave this here to ensure binding.pry isn't the last line
