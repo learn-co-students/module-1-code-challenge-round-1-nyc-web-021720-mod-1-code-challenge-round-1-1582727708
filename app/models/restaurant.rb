@@ -19,7 +19,10 @@ class Restaurant
   end
 
   def average_star_rating
-    
+    sum = self.reviews.sum do |review_obj|
+      review_obj.rating
+    end
+    sum/ self.reviews.length
   end
 
 end
