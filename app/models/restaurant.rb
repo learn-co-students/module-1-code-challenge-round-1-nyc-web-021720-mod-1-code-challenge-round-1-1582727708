@@ -17,5 +17,4 @@ class Restaurant
       each_review.customer 
     end.uniq 
   end 
-
 end

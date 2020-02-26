@@ -11,7 +11,6 @@ class Customer
   def full_name
     "#{given_name} #{family_name}"
   end
-end
 
   def self.all
     @@all
@@ -48,8 +47,6 @@ end
       full_name.customer == self
     end 
   end 
-
-  
 end
 
 
