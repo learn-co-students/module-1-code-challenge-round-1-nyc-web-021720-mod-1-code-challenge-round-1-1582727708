@@ -26,7 +26,7 @@ class Customer
   def restaurants  
     self.reviews.map do |review|
       review.restaurant
-    end.uniq
+    end
   end
 
   #given a restaurant object and a star rating (as an integer), creates a new review and associates it with that customer and restaurant.
