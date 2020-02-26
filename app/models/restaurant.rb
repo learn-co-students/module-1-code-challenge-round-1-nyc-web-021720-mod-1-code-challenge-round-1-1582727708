@@ -26,7 +26,7 @@ class Restaurant
   end
 
   def average_star_rating
-    self.reviews do |restaurant_review|
+    self.reviews.select do |restaurant_review|
       restaurant_review.rating
     end.sum / self.reviews.length
   end
