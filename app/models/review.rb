@@ -8,7 +8,6 @@ attr_reader :restaurant
     def initialize(given_name, family_name, restaurant, rating)
         @given_name = given_name
         @family_name = family_name
-        # @customer = customer
         @restaurant = restaurant
         @rating = rating
         Review.all << self 
